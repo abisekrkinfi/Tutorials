@@ -1,0 +1,56 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20190108044420)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "marks" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20190108044420')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;36;1mStudent Create (0.6ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 04:52:09', 100, 'Hari', '2019-01-08 04:52:09')[0m
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mStudent Create (0.5ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:13:18', 90, 'matty', '2019-01-08 05:13:18')[0m
+  [4;35;1mStudent Create (0.5ms)[0m   [0mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:13:27', 100, 'rk', '2019-01-08 05:13:27')[0m
+  [4;36;1mStudent Load (0.6ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mStudent Create (0.5ms)[0m   [0mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:13:55', 80, 'gowtham', '2019-01-08 05:13:55')[0m
+  [4;36;1mStudent Create (0.5ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:14:09', 82, 'vatsan', '2019-01-08 05:14:09')[0m
+  [4;35;1mStudent Create (0.5ms)[0m   [0mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:14:25', 85, 'vinu', '2019-01-08 05:14:25')[0m
+  [4;36;1mStudent Create (0.5ms)[0m   [0;1mINSERT INTO "students" ("updated_at", "marks", "name", "created_at") VALUES('2019-01-08 05:14:40', 40, 'abi', '2019-01-08 05:14:40')[0m
+  [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" LIMIT 1[0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" ORDER BY students.id DESC LIMIT 1[0m
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" WHERE (marks =90) [0m
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT * FROM "students" WHERE (marks >=90) [0m
+  [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mStudent Load (0.6ms)[0m   [0;1mSELECT * FROM "students" WHERE (marks>=90) ORDER BY marks[0m
+  [4;35;1mStudent Load (0.6ms)[0m   [0mSELECT * FROM "students" WHERE (marks>=90) ORDER BY marks DESC[0m
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT marks FROM "students" [0m
+  [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mStudent Load (0.2ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."name" = 'hari') LIMIT 1[0m
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."name" = 'Hari') LIMIT 1[0m
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."id" = 8) LIMIT 1[0m
+  [4;35;1mStudent Load (0.3ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."id" = 7) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (marks<90) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT avg("students".marks) AS avg_marks FROM "students" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT min("students".marks) AS min_marks FROM "students" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT max("students".marks) AS max_marks FROM "students" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("students".marks) AS sum_marks FROM "students" [0m
