@@ -796,3 +796,53 @@ Processing StudentsController#edit (for 127.0.0.1 at 2019-01-10 12:31:56) [GET]
 Rendering template within layouts/students
 Rendering students/edit
 Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/students/3/edit]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2019-01-22 12:24:42) [GET]
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2019-01-22 12:25:02) [GET]
+Rendering template within layouts/students
+Rendering students/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2019-01-22 12:25:12) [POST]
+  Parameters: {"authenticity_token"=>"tkyOK188hHz5ncAUIOGWpOjV6bmdAKKzh2/JPWEN/Y4=", "student"=>{"marks"=>"91", "name"=>"Gowtham", "rank"=>"3"}, "commit"=>"Create"}
+  [4;35;1mStudent Create (0.5ms)[0m   [0mINSERT INTO "students" ("updated_at", "created_at", "marks", "name", "rank") VALUES('2019-01-22 06:55:12', '2019-01-22 06:55:12', 91, 'Gowtham', 3)[0m
+Redirected to http://localhost:3000/students/6
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2019-01-22 12:25:12) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 6) [0m
+Rendering template within layouts/students
+Rendering students/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/students/6]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2019-01-22 12:25:17) [GET]
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2019-01-22 12:25:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mStudent Load (0.2ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+Rendering template within layouts/students
+Rendering students/edit
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/students/3/edit]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2019-01-22 12:25:26) [GET]
+  [4;35;1mStudent Load (0.3ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/students]

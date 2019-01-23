@@ -1,0 +1,48 @@
+.item-details{
+  float: left;
+}
+
+.shopping-cart{
+  float:right;
+}
+
+table{
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+  margin: 0px;
+  padding: 5px;
+}
+.shopping-cart{
+  width: 350px;
+  display: none;
+}
+
+/*
+.forHover{
+    display: block;
+}
+
+.whileHover{
+  display: none;
+}
+
+
+.forHover:hover{
+    display: none;
+}
+
+.whileHover:hover{
+  display: inline;
+}
+*/

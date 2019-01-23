@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping Site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="angularscript.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="jqueryscript.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+
+    <div class="w3-container" ng-app="myApp" ng-controller="myCtrl">
+
+      <input type="button" style="float:right" class="showCart"  value="cart">
+      <div class="item-details">
+
+        <table class="w3-table w3-bordered w3-striped">
+
+          <tr>
+            <th>Item </th>
+            <th>Description</th>
+          </tr>
+
+          <tr class="showCart" ng-repeat="phone in phoneDetails" >
+            <td><img src="{{phone.img}}" alt="{{phone.model}}"></td>
+            <td >{{phone.model}}<br></td>
+            <td >{{phone.brand}}<br></td>
+            <td >{{phone.price}}<br></td>
+            <td>  <input type="button" class="showCart" value="Add to cart" ng-click="addToCart($index)"> </td>
+          </tr>
+
+
+        </table>
+      </div>
+
+      <div class="shopping-cart">
+
+
+
+        <!--
+        <table class="w3-table w3-bordered w3-striped">
+
+          <tr>
+            <th>Item </th>
+            <th>Description</th>
+          </tr>
+
+          <tr ng-repeat="phone in cartItems" ng-click="changeView()">
+
+            <td >{{phone.model}}</td>
+            <div class="forHover" ng-hide="showToggle">
+            <td >{{phone.brand}}</td>
+            <td >{{phone.price}}</td>
+            <td >{{phone.count}}</td>
+            </div>
+
+            <div class="whileHover" ng-hide="showToggle">
+              <p>I appear!! </p>
+            </div>
+
+          </tr>
+
+          <span> <input type="button"  value="display" ng-click="display()"> </span>
+        </table>
+        -->
+
+        <ul ng-repeat="phone in cartItems" ng-mousemove="changeView()">
+
+          <li><img  style="height:50px;width:50px" src="{{phone.img}}" alt="{{phone.model}}"></li>
+          <li >{{phone.model}}</li>
+          <div class="forHover" ng-show="showToggle">
+          <li >{{phone.brand}}</li>
+          <li >{{phone.price}}</li>
+            </div>
+          <li >{{phone.count}}</li>
+
+
+          <div class="whileHover" ng-hide="showToggle">
+            <input type="button"  value="+" ng-click="increaseCount($index)">
+
+            <input type="button"  value="-" ng-click="decreaseCount($index)">
+            <input type="button"  value="X" ng-click="removeItem($index)">
+          </div>
+
+        </ul>
+
+            <label>Total: {{totalCost}}</label> <br>
+            <input type="button" id="closeCart"value="close">
+
+      </div>
+
+    </div>
+  </body>
+</html>
