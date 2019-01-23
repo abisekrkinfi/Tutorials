@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
 
-  $("#closeCart").click(function (){
+  $(".closeCart").click(function (){
 
     $(".shopping-cart").slideUp(1000);
+    $(".item-details").css("filter","blur(0px)");
   });
 
   /*
@@ -17,6 +18,7 @@ $(document).ready(function(){
 
 
     $(".shopping-cart").slideDown(1000);
+    $(".item-details").css("filter","blur(5px)");
 
   });
 
