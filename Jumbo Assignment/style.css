@@ -1,5 +1,6 @@
 .item-details{
   float: left;
+  width: 40%;
 }
 
 .shopping-cart{
@@ -10,7 +11,7 @@
   padding-top:  50px;
   border: 1px solid #888;
   height: 500px;
-  width: 400px;
+  width: 30%;
   display:none;
   align-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -21,9 +22,9 @@
 .clickable{
 
   float: left;
-
+  
   height: 1000px;
-  width: 425px;
+  width: 30%;
 }
 .decoratedText{
   color: white;
