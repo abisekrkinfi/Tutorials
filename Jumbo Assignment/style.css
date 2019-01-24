@@ -5,24 +5,43 @@
 .shopping-cart{
   float:right;
   position: relative;
-  background-color: #fefefe;
+  background-color: #fefef;
   margin: auto;
-  padding: 0;
+  padding-top:  50px;
   border: 1px solid #888;
-  height: 1000px;
-  width: 80%;
+  height: 500px;
+  width: 400px;
+  display:none;
+  align-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.8s
 }
 
+.clickable{
+
+  float: left;
+
+  height: 1000px;
+  width: 425px;
+}
+.decoratedText{
+  color: white;
+   display: block;
+  background-color: #333333;
+  border-left: 50px;
+  align-items:center;
+  text-align: center;
+
+}
 
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
-table{
+.displayTablee{
   align-items: center;
+  width: 100%;
 }
 
 ul {
@@ -37,29 +56,10 @@ li {
   float: left;
   margin: 0px;
   padding: 5px;
-}
-.shopping-cart{
-  width: 350px;
-  display: none;
+  width: auto;
 }
 
 
-
-/*
-.forHover{
-    display: block;
+input.whileHover{
+  border-style: solid;
 }
-
-.whileHover{
-  display: none;
-}
-
-
-.forHover:hover{
-    display: none;
-}
-
-.whileHover:hover{
-  display: inline;
-}
-*/

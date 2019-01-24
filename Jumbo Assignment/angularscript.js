@@ -5,13 +5,11 @@ app.controller("myCtrl", function($scope){
     $scope.phoneDetails=[
       {img:"j7prime.jpg"  ,model:"J7 prime",brand:"samsung",price:15000,count:0},
       {img:"motog5.jpg" ,model:"G5 turbo",brand:"Moto",price:16000,count:0},
-      {img:"motog3.jpg" ,model:"G3 turbo",brand:"Moto",price:16000,count:0}
+      {img:"motog3.jpg" ,model:"G3 turbo",brand:"Moto",price:12000,count:0},
+      {img:"iphonese.png" ,model:"Iphone SE",brand:"iPhone",price:22000,count:0}
     ];
 
     $scope.cartItems=[];
-    $scope.count=0;
-    $scope.item="";
-    $scope.cartLength=0;
     $scope.showToggle=true;
     $scope.totalCost=0;
 
@@ -25,6 +23,7 @@ app.controller("myCtrl", function($scope){
         $scope.totalCost+= $scope.cartItems[i].count* $scope.cartItems[i].price;
       }
     }
+
     $scope.alreadyPresent=function alreadyPresent(phoneModel){
 
       var i;
@@ -41,21 +40,22 @@ app.controller("myCtrl", function($scope){
     }
 
 
-    $scope.changeView= function changeView(){
-      $scope.showToggle= !$scope.showToggle;
+    $scope.quantityView= function quantityView(){
+      $scope.showToggle= false;
+    }
+
+    $scope.infoView= function infoView(){
+      $scope.showToggle= true;
     }
 
     $scope.increaseCount=function increaseCount(index){
-      //alert(index);
       $scope.cartItems[index].count+=1;
-      //$scope.checkoutCount=$scope.cartItems[index].count;
       $scope.updateCost();
     }
 
 
     $scope.decreaseCount= function decreaseCount(index){
 
-          //  alert(index);
         if( $scope.cartItems[index].count!=1){
                       $scope.cartItems[index].count-=1;
                       $scope.checkoutCount=$scope.cartItems[index].count;
@@ -73,15 +73,7 @@ app.controller("myCtrl", function($scope){
     $scope.addToCart=function addToCart(index) {
       $scope.count+=1;
       $scope.item="You clicked"+ index +" item";
-
-      //$scope.cartItems.push($scope.phoneDetails[index]);
-      //alert($scope.cartItems.length);
       $scope.cartLength=$scope.cartItems.length;
-      //$scope.cartItems[ $scope.cartItems.length ]= $scope.phoneDetails[index];
-      //$scope.cartItems.push({});
-      //alert($scope.phoneDetails[index].model);
-      //$scope.cartLength=count;
-
       $scope.cartIndex;
       if($scope.alreadyPresent($scope.phoneDetails[index].model)){
 
