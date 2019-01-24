@@ -68,7 +68,7 @@
         </table>
         -->
 
-        <ul ng-repeat="phone in cartItems" ng-mousemove="changeView()">
+        <ul ng-repeat="phone in cartItems" ng-mouseenter="changeView()" ng-mouseleave="changeView()">
 
           <li><img  style="height:50px;width:50px" src="{{phone.img}}" alt="{{phone.model}}"></li>
           <li >{{phone.model}}</li>
