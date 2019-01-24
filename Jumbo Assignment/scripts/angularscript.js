@@ -12,6 +12,12 @@ app.controller("myCtrl", function($scope){
     $scope.cartItems=[];
     $scope.showToggle=true;
     $scope.totalCost=0;
+    $scope.qty=1;
+
+    $scope.updateqty= function updateqty(index){
+
+      $scope.qty= $scope.cartItems[index].count;
+    }
 
 
     $scope.updateCost= function updateCost(){

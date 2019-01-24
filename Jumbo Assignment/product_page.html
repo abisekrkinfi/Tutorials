@@ -15,7 +15,7 @@
 
     <input type="button" style="float:left;width:100px" class="w3-btn w3-black showCart"  value="View cart"><br>
 
-    <div class="w3-container" ng-app="myApp" ng-controller="myCtrl">
+    <div class="holder w3-container" ng-app="myApp" ng-controller="myCtrl">
 
 
 
@@ -32,7 +32,7 @@
             <th>Price</th>
           </tr>
 
-          <tr  ng-repeat="phone in phoneDetails" >
+          <tr   ng-repeat="phone in phoneDetails" >
             <td><img style="height:20%; width:50%"src="images/{{phone.img}}" alt="{{phone.model}}"></td>
             <td >{{phone.model}}<br></td>
             <td >{{phone.brand}}<br></td>
@@ -50,27 +50,31 @@
       <div class="shopping-cart">
         <input type="button" style="float:right" class="w3-circle w3-red closeCart" value="X">
         <label class="decoratedText w3-xlarge">Items in the cart</label> <br>
-        <ul ng-repeat="phone in cartItems" ng-mouseenter="quantityView()" ng-mouseleave="infoView()">
+
+        <ul style="background-color:white" ng-repeat="phone in cartItems" ng-mouseenter="quantityView()" ng-mouseleave="infoView()">
 
           <li><img  style="height:50px;width:50px" src="images/{{phone.img}}" alt="{{phone.model}}"></li>
           <li >{{phone.model}}</li>
           <div class="forHover" ng-show="showToggle">
           <li >{{phone.brand}}</li>
           <li >{{phone.price}}</li>
-            </div>
           <li style="border-style:solid">{{phone.count}}&nbsp</li>
+          </div>
+
 
 
           <div class="whileHover" ng-hide="showToggle">
             <input class="w3-btn w3-gray" type="button"  value="+" ng-click="increaseCount($index)">
-
+            <label style="padding: 5px;border-style:solid">{{cartItems[$index].count}}</label>
             <input class="w3-btn w3-gray" type="button"  value="-" ng-click="decreaseCount($index)">
-            <input class="w3-circle w3-red" type="button"  value="X" ng-click="removeItem($index)">
+            <input class="w3-circle w3-red" type="button"  value="X" ng-click="removeItem($index)"><br>
+            <label style="float:right">{{cartItems[$index].price* cartItems[$index].count}}</label>
           </div>
 
         </ul>
 
-            <label class="decoratedText w3-xlarge" >Total: {{totalCost}}</label> <br>
+            <label class="decoratedText w3-large total" >Total: {{totalCost}}</label> <br>
+            <input class="w3-large w3-blue w3-btn checkout" type="button"  value="Place Order">
 
 
       </div>

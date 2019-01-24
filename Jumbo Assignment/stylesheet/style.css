@@ -3,26 +3,76 @@
   width: 40%;
 }
 
+/*
 .shopping-cart{
   float:right;
   position: relative;
   background-color: #fefef;
   margin: auto;
-  padding-top:  50px;
+  padding-top:  0px;
   border: 1px solid #888;
-  height: 500px;
+  height: 100%;
   width: 30%;
   display:none;
   align-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
-  animation-duration: 0.8s
+  animation-duration: 2s
+}
+
+@keyframes animatetop {
+  from {right:-300px; opacity: 0}
+  to {right:0; opacity: 1}
+}
+
+*/
+.holder{
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.shopping-cart{
+    position: absolute;
+     right: -400px;
+     height: 500px;
+     width: 30%;
+     display: none;
+     background-color: #ffffe6;
+     -webkit-animation: slide 0.5s forwards;
+     -webkit-animation-delay: 2s;
+     animation: slide 0.5s forwards;
+     animation-delay: 0.5s;
+}
+
+@-webkit-keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
+
+
+.total, .checkout{
+  position:absolute;
+  bottom:0px;
+}
+
+.checkout{
+  right: 0px;
+  height:30px;
+  bottom: 1px;
+  align-content: center;
 }
 
 .clickable{
 
   float: left;
-  
+
   height: 1000px;
   width: 30%;
 }
@@ -36,10 +86,7 @@
 
 }
 
-@keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
-}
+
 .displayTablee{
   align-items: center;
   width: 100%;
@@ -50,6 +97,7 @@ ul {
   margin: 10px;
   padding: 10px;
   overflow: hidden;
+  border-style: solid;
 
 }
 
@@ -58,9 +106,4 @@ li {
   margin: 0px;
   padding: 5px;
   width: auto;
-}
-
-
-input.whileHover{
-  border-style: solid;
 }
