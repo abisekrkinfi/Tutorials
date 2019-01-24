@@ -14,6 +14,7 @@ $(document).ready(function(){
     //$(".shopping-cart").slideDown(1000);
     $(".shopping-cart").show();
     $(".item-details").css("filter","blur(5px)");
+    $(".clickable").css("filter","blur(5px)");
 
   });
 
