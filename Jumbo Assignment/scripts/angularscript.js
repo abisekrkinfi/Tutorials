@@ -4,7 +4,7 @@ app.controller("myCtrl", function($scope){
 
     $scope.phoneDetails=[
       {img:"j7prime.jpg"  ,model:"J7 prime",brand:"samsung",price:15000,count:0},
-      {img:"motog5.jpg" ,model:"G5 turbo",brand:"Moto",price:16000,count:0},
+      {img:"motog5.jpg" ,model:"G5 s-plus",brand:"Moto",price:16000,count:0},
       {img:"motog3.jpg" ,model:"G3 turbo",brand:"Moto",price:12000,count:0},
       {img:"iphonese.png" ,model:"Iphone SE",brand:"iPhone",price:22000,count:0}
     ];
