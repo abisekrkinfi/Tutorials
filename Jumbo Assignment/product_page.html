@@ -48,7 +48,7 @@
       </div>
 
       <div class="shopping-cart">
-        <input type="button" style="float:right" class="w3-circle w3-red closeCart" value="X">
+        <input type="button" style="float:right" class="w3-square w3-xlarge w3-white closeCart" value="X">
         <label class="decoratedText w3-xlarge">Items in the cart</label> <br>
 
         <ul style="background-color:white" ng-repeat="phone in cartItems" ng-mouseenter="quantityView()" ng-mouseleave="infoView()">
@@ -70,7 +70,7 @@
             <input class="w3-circle w3-red" type="button"  value="X" ng-click="removeItem($index)"><br>
             <label style="float:right">{{cartItems[$index].price* cartItems[$index].count}}</label>
           </div>
-          
+
         </ul>
 
 
