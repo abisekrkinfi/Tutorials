@@ -13,7 +13,7 @@
   </head>
   <body>
 
-  
+
 
     <div class="holder w3-container" ng-app="myApp" ng-controller="myCtrl">
 
@@ -70,8 +70,9 @@
             <input class="w3-circle w3-red" type="button"  value="X" ng-click="removeItem($index)"><br>
             <label style="float:right">{{cartItems[$index].price* cartItems[$index].count}}</label>
           </div>
-
+          
         </ul>
+
 
             <label class="decoratedText w3-large total" >Total: {{totalCost}}</label> <br>
             <input class="w3-large w3-blue w3-btn checkout" type="button"  value="Place Order">
