@@ -36,7 +36,7 @@
             <td><img style="height:20%; width:50%"src="images/{{phone.img}}" alt="{{phone.model}}"></td>
             <td >{{phone.model}}<br></td>
             <td >{{phone.brand}}<br></td>
-            <td >{{phone.price}}<br></td>
+            <td >&#8377 {{phone.price}}<br></td>
             <td>  <input type="button" class="showCart" value="Add to cart" ng-click="addToCart($index)"> </td>
           </tr>
 
@@ -57,7 +57,7 @@
           <li >{{phone.model}}</li>
           <div class="forHover" ng-show="showToggle">
           <li >{{phone.brand}}</li>
-          <li >{{phone.price}}</li>
+          <li >&#8377 {{phone.price}}</li>
           <li style="border-style:solid">{{phone.count}}&nbsp</li>
           </div>
 
@@ -68,13 +68,13 @@
             <label style="padding: 5px;border-style:solid">{{cartItems[$index].count}}</label>
             <input class="w3-btn w3-gray" type="button"  value="-" ng-click="decreaseCount($index)">
             <input class="w3-circle w3-red" type="button"  value="X" ng-click="removeItem($index)"><br>
-            <label style="float:right">{{cartItems[$index].price* cartItems[$index].count}}</label>
+            <label style="float:right">&#8377 {{cartItems[$index].price* cartItems[$index].count}}</label>
           </div>
 
         </ul>
 
 
-            <label class="decoratedText w3-large total" >Total: {{totalCost}}</label> <br>
+            <label class="decoratedText w3-large total" >Total: &#8377 {{totalCost}}</label> <br>
             <input class="w3-large w3-blue w3-btn checkout" type="button"  value="Place Order">
 
 
