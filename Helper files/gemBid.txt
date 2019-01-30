@@ -1,0 +1,4 @@
+/workspace/infibeam_bennu-git2/apps/gBid$ rails s
+
+
+/workspace/infibeam_bennu-git2/apps/gBid.web$ yarn start

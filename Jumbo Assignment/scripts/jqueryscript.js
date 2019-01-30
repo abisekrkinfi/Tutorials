@@ -13,7 +13,7 @@ $(document).ready(function(){
   $(".showCart").click(function (){
 
 
-    
+
     $(".shopping-cart").show();
 
     $(".item-details").css("filter","blur(5px)");
